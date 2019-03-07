@@ -20,6 +20,7 @@ DD: 0
 DL: 0
 DR: 0
 ```
+![Screenshot](https://i.gyazo.com/54a1ada87eb10c5d4b554646e207a448.png)
 
 ## Functionality
 First download [SwareJonge's custom Lua version of Dolphin](https://github.com/SwareJonge/Dolphin-Lua-Core). **MAKE SURE** that you go to Config and Disable Dual Core Speedup as well as Idle Core Skipping. Next navigate to DSP and change the audio engine to DSP LLE Recompiler. Failure to correctly change these settings will result in desynchronization of your inputs on writing to the file as well as playback in-game. Next, place `MKW_Core.lua` and `mkw_input_file_output.lua` in the root Dolphin folder. Place `input_writer_with_savestate_support.lua` and `input_reader_with_savestate_support.lua` in the scripts folder. When you'd like to begin recording your inputs to a file, in Dolphin go to Tools>Execute Script, and in the drop down menu select `input_writer_with_savestate_support.lua`. Press Start Script, and your inputs will begin to write to `mkw_input_file_output.lua`. Note that, as the name implies, you can load savestates and any inputs that you rewrite will be overwritten in the input file accordingly. When you would like to stop writing to file, press Cancel Script.
