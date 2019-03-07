@@ -1,0 +1,11 @@
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Dolphin TAStudio.exe.config
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Dolphin TAStudio.exe
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Dolphin TAStudio.pdb
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\MainWindow.Properties.Resources.resources
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Dolphin TAStudio.exe
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Dolphin TAStudio.pdb
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache

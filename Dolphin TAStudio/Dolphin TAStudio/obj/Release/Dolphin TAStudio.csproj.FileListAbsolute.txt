@@ -1,0 +1,20 @@
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.Form1.resources
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.Form2.resources
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Release\MainWindow.Properties.Resources.resources
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Release\Dolphin TAStudio.csproj.GenerateResource.cache
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Release\Dolphin TAStudio.csproj.CoreCompileInputs.cache
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Release\Dolphin TAStudio.exe
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Release\Dolphin TAStudio.pdb
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Release\Dolphin TAStudio.exe.config
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Release\Dolphin TAStudio.exe
+C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Release\Dolphin TAStudio.pdb
+C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\bin\Release\Dolphin TAStudio.exe.config
+C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\bin\Release\Dolphin TAStudio.exe
+C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\bin\Release\Dolphin TAStudio.pdb
+C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Release\WindowsFormsApp1.Form1.resources
+C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Release\WindowsFormsApp1.Form2.resources
+C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Release\MainWindow.Properties.Resources.resources
+C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Release\Dolphin TAStudio.csproj.GenerateResource.cache
+C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Release\Dolphin TAStudio.csproj.CoreCompileInputs.cache
+C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Release\Dolphin TAStudio.exe
+C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Release\Dolphin TAStudio.pdb
