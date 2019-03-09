@@ -1,13 +1,13 @@
 ﻿/*TODO:
  * If the user focuses on frame column and presses backspace or delete, remove the row and adjust framecount accordingly.
- *
- * 
- * 
- *
+ * If the user focuses on frame column and presses enter, add a new row below.
  */
 
 /*RECENTLY ADDED FEATURES:
  * Upon exiting out of the form, prompt the user to save if unsaved modifications.
+ * Users can now copy-paste row data to overwrite another row.
+ * Users can now copy-paste individual cell data to overwrite the selected cell,
+ *      as well as any cells below and to the right so long as there is still leftover data stored in the buffer.
  */
 
 using System;
@@ -20,6 +20,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace WindowsFormsApp1
 {
@@ -29,16 +30,23 @@ namespace WindowsFormsApp1
         private string fileName;  //Keeps track of input file name for saving purposes and telling if we have a file currently open.
         private int frameCount;  //Keeps track of the last frame of input in our table.
         private bool changed = false;  //Keeps track of whether or not the user has made changes to the input table since saving/opening a file.
+        private List<string> buffer = new List<string>();  //Acts as the clipboard.
+        /* BUFFER FORMAT:
+         * Each index represents a frame.
+         * Within an index, each space represents a different attribute (button or analog value).
+         * A # symbol represents that we do not wish to overwrite the given attribute on a specific frame.
+         * */
 
         public Form1()
         {
             InitializeComponent();
+            pasteCtrlVToolStripMenuItem.Enabled = false;  //Initialize the Paste button to disabled to prevent pasting empty data.
         }
 
         public void aboutToolStripMenuItem_Click(object sender, System.EventArgs e)  //Help->About button
         {
-            Form2 f2 = new Form2();
-            f2.Show();
+            About about = new About();
+            about.Show();
         }
 
         private void openData(string fileLocation)  //Run when we want to load input data from a file.
@@ -193,8 +201,169 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void copyRows()  //Runs when the user is trying to copy an entire row of framedata.
+        {
+            buffer.Clear();  //Remove any data previously stored in the buffer.
+            string data;
+            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            {
+                data = "";
+                for (int i = 1; i < dataGridView1.ColumnCount; i++)
+                {
+                    data += row.Cells[i].Value.ToString() + " ";
+                }
+                data = data.Substring(0, data.Length - 1);  //Chop off the extra space at the end.
+                buffer.Add(data);
+            }
+        }
+
+        private List<int> populateRowList()
+        {
+            List<int> rowList = new List<int>();
+            foreach (DataGridViewCell cell in dataGridView1.SelectedCells)
+            {
+                if (!rowList.Contains(cell.RowIndex))
+                {
+                    rowList.Add(cell.RowIndex);
+                }
+            }
+            return rowList;
+        }
+
+        private List<int> populateColumnList()
+        {
+            List<int> colList = new List<int>();
+            foreach (DataGridViewCell cell in dataGridView1.SelectedCells)
+            {
+                if (!colList.Contains(cell.ColumnIndex))
+                {
+                    colList.Add(cell.ColumnIndex);
+                }
+            }
+            return colList;
+        }
+
+        private void copyCells()
+        {
+            buffer.Clear();  //Remove any data previously stored in the buffer.
+            List<int> rowList = new List<int>();
+
+            //First populate rowList with the list of rows that have selected cells somewhere.
+            rowList = populateRowList();
+            rowList.Sort();
+
+            //Next generate a data string that either has the cell data of copied cells or a # if a cell was not selected.
+            string data;
+            bool start;
+            foreach (int row in rowList)
+            {
+                data = "";
+                start = false;
+                for (int i = 1; i < dataGridView1.ColumnCount; i++)
+                {
+                    if (dataGridView1.Rows[row].Cells[i].Selected)
+                    {
+                        start = true;
+                        data += dataGridView1.Rows[row].Cells[i].Value.ToString() + " ";
+                    }
+                    else if (start)
+                    {
+                        data += "# ";
+                    }
+                }
+                data = data.Substring(0, data.Length - 1);
+                buffer.Add(data);
+            }
+        }
+
+        private void copyData()
+        {
+            //First make sure the user isn't dumb and tries to copy data without opening a file.
+            if (fileName == null)
+            {
+                return;
+            }
+
+            pasteCtrlVToolStripMenuItem.Enabled = true;
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                copyRows();  //Runs if the user is trying to copy an entire row.
+            }
+
+            else if (dataGridView1.SelectedCells.Count > 0)
+            {
+                copyCells();  //Runs if the user is only copying a select group of cells.
+            }
+        }
+
+        private void pasteData()
+        {
+            //First, check to make sure the user isn't dumb and doesn't try to paste when a file isn't loader or when they haven't copied data.
+            if (fileName == null || buffer.Count == 0)
+            {
+                return;
+            }
+            List<int> rowList = new List<int>();
+            List<int> columnList = new List<int>();
+
+            //First populate rowList with the list of rows that have selected cells somewhere. Then keep track of the first column selected.
+            rowList = populateRowList();
+            rowList.Sort();
+            int firstRow = rowList[0];
+
+            //Next, populate the columnList with the list of columns that have selected cells somewhere. Then keep track of the first column selected.
+            columnList = populateColumnList();
+            columnList.Sort();
+            int userColumnOffset = columnList[0];
+            if (userColumnOffset == 0)
+            {
+                for (int row = 0; row < buffer.Count; row++)
+                {
+                    string framedata = buffer[row];
+                    string[] attributes = framedata.Split(' ');
+
+                    for (int i = 1; i < dataGridView1.ColumnCount; i++)
+                    {
+                        dataGridView1.Rows[firstRow + row].Cells[i].Value = attributes[i - 1];
+                    }
+                }
+            }
+            else
+            {
+                for (int row = 0; row < buffer.Count; row++)
+                {
+                    string framedata = buffer[row];
+                    string[] attributes = framedata.Split(' ');
+
+                    for (int i = 1; i < dataGridView1.ColumnCount; i++)
+                    {
+                        if (!attributes[i - 1].Equals("#"))
+                        {
+                            dataGridView1.Rows[firstRow + row].Cells[i - 1 + userColumnOffset].Value = attributes[i - 1];
+                        }
+                        if (i == attributes.Length - 1)
+                        {
+                            break;
+                        }
+                    }
+                }
+            }
+
+            dataGridView1.Update();
+        }
+
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.Control && e.KeyCode == Keys.C)  //User is attempting to copy data.
+            {
+                copyData();
+            }
+
+            if (e.Control && e.KeyCode == Keys.V)  //User wants to paste row data.
+            {
+                pasteData();
+            }
+
             if (e.Control && e.KeyCode == Keys.S)
             {
                 saveCtrlSToolStripMenuItem_Click(sender, e);
@@ -234,8 +403,10 @@ namespace WindowsFormsApp1
 
         private void openCtrlOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-
+            if (changed)
+            {
+                saveBeforeClosing(sender, e);
+            }
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -257,16 +428,19 @@ namespace WindowsFormsApp1
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (fileName != null)
+            //Do nothing if there isn't a file open.
+            if (fileName == null)
             {
-                if (changed == true)
-                {
-                    saveBeforeClosing(sender, e);
-                }
-                else
-                {
-                    clearDataTable();
-                }
+                return;
+            }
+
+            if (changed)  //Does the user have unsaved changes?
+            {
+                saveBeforeClosing(sender, e);
+            }
+            else  //If the user didn't make changes, close the table.
+            {
+                clearDataTable();
             }
         }
 
@@ -279,7 +453,7 @@ namespace WindowsFormsApp1
                 {
                     saveCtrlSToolStripMenuItem_Click(sender, e);
                 }
-                clearDataTable();
+                clearDataTable();  //This makes sure we don't clear the table if the user pressed Cancel.
             }
         }
 
@@ -291,6 +465,16 @@ namespace WindowsFormsApp1
         private void Form1_FormClosed(object sender, EventArgs e)
         {
             saveBeforeClosing(sender, e);
+        }
+
+        private void copyCtrlCToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            copyData();
+        }
+
+        private void pasteCtrlVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pasteData();
         }
     }
 }

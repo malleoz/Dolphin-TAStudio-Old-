@@ -36,6 +36,8 @@
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyCtrlCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasteCtrlVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -73,36 +75,53 @@
             // openCtrlOToolStripMenuItem
             // 
             this.openCtrlOToolStripMenuItem.Name = "openCtrlOToolStripMenuItem";
-            this.openCtrlOToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.openCtrlOToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.openCtrlOToolStripMenuItem.Text = "Open (Ctrl + O)";
             this.openCtrlOToolStripMenuItem.Click += new System.EventHandler(this.openCtrlOToolStripMenuItem_Click);
             // 
             // saveCtrlSToolStripMenuItem
             // 
             this.saveCtrlSToolStripMenuItem.Name = "saveCtrlSToolStripMenuItem";
-            this.saveCtrlSToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.saveCtrlSToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.saveCtrlSToolStripMenuItem.Text = "Save (Ctrl + S)";
             this.saveCtrlSToolStripMenuItem.Click += new System.EventHandler(this.saveCtrlSToolStripMenuItem_Click);
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.saveAsToolStripMenuItem.Text = "Save As";
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.saveAsToolStripMenuItem.Text = "Save As (Ctrl + Shft + S)";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
+            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copyCtrlCToolStripMenuItem,
+            this.pasteCtrlVToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // copyCtrlCToolStripMenuItem
+            // 
+            this.copyCtrlCToolStripMenuItem.Name = "copyCtrlCToolStripMenuItem";
+            this.copyCtrlCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.copyCtrlCToolStripMenuItem.Text = "Copy (Ctrl + C)";
+            this.copyCtrlCToolStripMenuItem.Click += new System.EventHandler(this.copyCtrlCToolStripMenuItem_Click);
+            // 
+            // pasteCtrlVToolStripMenuItem
+            // 
+            this.pasteCtrlVToolStripMenuItem.Name = "pasteCtrlVToolStripMenuItem";
+            this.pasteCtrlVToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pasteCtrlVToolStripMenuItem.Text = "Paste (Ctrl + V)";
+            this.pasteCtrlVToolStripMenuItem.Click += new System.EventHandler(this.pasteCtrlVToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -122,6 +141,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dataGridView1.Location = new System.Drawing.Point(0, 27);
@@ -169,6 +189,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem copyCtrlCToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pasteCtrlVToolStripMenuItem;
     }
 }
 
