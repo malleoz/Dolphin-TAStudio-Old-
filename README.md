@@ -28,7 +28,7 @@ First download [SwareJonge's custom Lua version of Dolphin](https://github.com/S
 Run `Dolphin TAStudio.exe` and use File>Open to open `mkw_input_file_output.lua`. Make changes to your input file as desired. When finished, use File>Save to save changes. Then to play back your newly modified input file, go back in Dolphin and in the drop down menu select `input_reader_with_savestate_support.lua`. Press Start Script and the inputs stored in the newly modified input file will be played back.
 
 ## Features
-###Editing Frames
+### Editing Frames
 You can change the contents of a cell by either double clicking on the cell or simply by typing while selecting a cell.
 
 ### Copy-Pasting Framedata
