@@ -26,3 +26,14 @@ DR: 0
 First download [SwareJonge's custom Lua version of Dolphin](https://github.com/SwareJonge/Dolphin-Lua-Core). **MAKE SURE** that you go to Config and Disable Dual Core Speedup as well as Idle Core Skipping. Next navigate to DSP and change the audio engine to DSP LLE Recompiler. Failure to correctly change these settings will result in desynchronization of your inputs on writing to the file as well as playback in-game. Next, place `MKW_Core.lua` and `mkw_input_file_output.lua` in the root Dolphin folder. Place `input_writer_with_savestate_support.lua` and `input_reader_with_savestate_support.lua` in the scripts folder. When you'd like to begin recording your inputs to a file, in Dolphin go to Tools>Execute Script, and in the drop down menu select `input_writer_with_savestate_support.lua`. Press Start Script, and your inputs will begin to write to `mkw_input_file_output.lua`. Note that, as the name implies, you can load savestates and any inputs that you rewrite will be overwritten in the input file accordingly. When you would like to stop writing to file, press Cancel Script.
 
 Run `Dolphin TAStudio.exe` and use File>Open to open `mkw_input_file_output.lua`. Make changes to your input file as desired. When finished, use File>Save to save changes. Then to play back your newly modified input file, go back in Dolphin and in the drop down menu select `input_reader_with_savestate_support.lua`. Press Start Script and the inputs stored in the newly modified input file will be played back.
+
+## Features
+###Editing Frames
+You can change the contents of a cell by either double clicking on the cell or simply by typing while selecting a cell.
+
+###Copy-Pasting Framedata
+Select a cell or a group of cells and go to Edit>Copy or just press Ctrl + C. Then simply paste overtop of another cell.
+WARNING: If you paste a group of cells several columns wide, do not try to paste it if there isn't enough room to the right. The program will crash.
+
+###Inserting New Frames w/ Default Values
+Simply type a value into the last blank row and a new row will be generated with default values. Horizontal and vertical analog stick values are neutral values, A is defaulted to on, and all other buttons are defaulted to off.
