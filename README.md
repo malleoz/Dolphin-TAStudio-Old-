@@ -31,9 +31,9 @@ Run `Dolphin TAStudio.exe` and use File>Open to open `mkw_input_file_output.lua`
 ###Editing Frames
 You can change the contents of a cell by either double clicking on the cell or simply by typing while selecting a cell.
 
-###Copy-Pasting Framedata
+### Copy-Pasting Framedata
 Select a cell or a group of cells and go to Edit>Copy or just press Ctrl + C. Then simply paste overtop of another cell.
 WARNING: If you paste a group of cells several columns wide, do not try to paste it if there isn't enough room to the right. The program will crash.
 
-###Inserting New Frames w/ Default Values
+### Inserting New Frames w/ Default Values
 Simply type a value into the last blank row and a new row will be generated with default values. Horizontal and vertical analog stick values are neutral values, A is defaulted to on, and all other buttons are defaulted to off.
