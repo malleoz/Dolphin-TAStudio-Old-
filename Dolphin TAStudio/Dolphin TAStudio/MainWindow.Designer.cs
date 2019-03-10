@@ -38,6 +38,8 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyCtrlCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pasteCtrlVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.undoCtrlZToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.redoCtrlYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -104,7 +106,9 @@
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.copyCtrlCToolStripMenuItem,
-            this.pasteCtrlVToolStripMenuItem});
+            this.pasteCtrlVToolStripMenuItem,
+            this.undoCtrlZToolStripMenuItem,
+            this.redoCtrlYToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
@@ -122,6 +126,20 @@
             this.pasteCtrlVToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pasteCtrlVToolStripMenuItem.Text = "Paste (Ctrl + V)";
             this.pasteCtrlVToolStripMenuItem.Click += new System.EventHandler(this.pasteCtrlVToolStripMenuItem_Click);
+            // 
+            // undoCtrlZToolStripMenuItem
+            // 
+            this.undoCtrlZToolStripMenuItem.Name = "undoCtrlZToolStripMenuItem";
+            this.undoCtrlZToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.undoCtrlZToolStripMenuItem.Text = "Undo (Ctrl + Z)";
+            this.undoCtrlZToolStripMenuItem.Click += new System.EventHandler(this.undoCtrlZToolStripMenuItem_Click);
+            // 
+            // redoCtrlYToolStripMenuItem
+            // 
+            this.redoCtrlYToolStripMenuItem.Name = "redoCtrlYToolStripMenuItem";
+            this.redoCtrlYToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.redoCtrlYToolStripMenuItem.Text = "Redo (Ctrl + Y)";
+            this.redoCtrlYToolStripMenuItem.Click += new System.EventHandler(this.redoCtrlYToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -191,6 +209,8 @@
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem copyCtrlCToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pasteCtrlVToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem undoCtrlZToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem redoCtrlYToolStripMenuItem;
     }
 }
 
