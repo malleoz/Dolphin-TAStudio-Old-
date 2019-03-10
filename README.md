@@ -41,4 +41,5 @@ Simply type a value into the last blank row and a new row will be generated with
 ## Recent Updates
 #v1.3
 Added undo+redo feature
+
 Represent button inputs as checkbox booleans rather than integers.
