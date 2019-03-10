@@ -19,3 +19,13 @@ C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Release\Dolphi
 C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Release\Dolphin TAStudio.pdb
 C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Release\Dolphin TAStudio.csprojAssemblyReference.cache
 C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Release\WindowsFormsApp1.About.resources
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\bin\Release\Dolphin TAStudio.exe.config
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\bin\Release\Dolphin TAStudio.exe
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\bin\Release\Dolphin TAStudio.pdb
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Release\WindowsFormsApp1.Form1.resources
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Release\WindowsFormsApp1.About.resources
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Release\MainWindow.Properties.Resources.resources
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Release\Dolphin TAStudio.csproj.GenerateResource.cache
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Release\Dolphin TAStudio.csproj.CoreCompileInputs.cache
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Release\Dolphin TAStudio.exe
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Release\Dolphin TAStudio.pdb

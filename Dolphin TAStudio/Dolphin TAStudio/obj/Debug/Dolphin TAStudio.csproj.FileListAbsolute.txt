@@ -10,7 +10,6 @@ C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Dolphin 
 C:\Users\Malle\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Dolphin TAStudio.pdb
 C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Debug\Dolphin TAStudio.csprojAssemblyReference.cache
 C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Debug\WindowsFormsApp1.Form1.resources
-C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Debug\WindowsFormsApp1.Form2.resources
 C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Debug\MainWindow.Properties.Resources.resources
 C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Debug\Dolphin TAStudio.csproj.GenerateResource.cache
 C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Debug\Dolphin TAStudio.csproj.CoreCompileInputs.cache
@@ -19,3 +18,15 @@ C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Debug\Dolphin 
 C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\bin\Debug\Dolphin TAStudio.exe.config
 C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\bin\Debug\Dolphin TAStudio.exe
 C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\bin\Debug\Dolphin TAStudio.pdb
+C:\Users\Malle\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Debug\WindowsFormsApp1.About.resources
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\bin\Debug\Dolphin TAStudio.exe.config
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\bin\Debug\Dolphin TAStudio.exe
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\bin\Debug\Dolphin TAStudio.pdb
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Debug\Dolphin TAStudio.csprojAssemblyReference.cache
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Debug\WindowsFormsApp1.About.resources
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Debug\MainWindow.Properties.Resources.resources
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Debug\Dolphin TAStudio.csproj.GenerateResource.cache
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Debug\Dolphin TAStudio.csproj.CoreCompileInputs.cache
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Debug\Dolphin TAStudio.exe
+C:\Users\Sean\source\repos\Dolphin TAStudio\Dolphin TAStudio\obj\Debug\Dolphin TAStudio.pdb
