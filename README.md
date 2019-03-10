@@ -29,7 +29,7 @@ Run `Dolphin TAStudio.exe` and use File>Open to open `mkw_input_file_output.lua`
 
 ## Features
 ### Editing Frames
-You can change the contents of a cell by either double clicking on the cell or simply by typing while selecting a cell.
+You can change the analog stick inputs by either double clicking on the cell or simply by typing while selecting a cell. For button presses, simply check the box to represent the button being pressed.
 
 ### Copy-Pasting Framedata
 Select a cell or a group of cells and go to Edit>Copy or just press Ctrl + C. Then simply paste overtop of another cell.
@@ -37,3 +37,8 @@ WARNING: If you paste a group of cells several columns wide, do not try to paste
 
 ### Inserting New Frames w/ Default Values
 Simply type a value into the last blank row and a new row will be generated with default values. Horizontal and vertical analog stick values are neutral values, A is defaulted to on, and all other buttons are defaulted to off.
+
+## Recent Updates
+#v1.3
+Added undo+redo feature
+Represent button inputs as checkbox booleans rather than integers.
