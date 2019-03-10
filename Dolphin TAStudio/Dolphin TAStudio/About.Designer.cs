@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,8 +55,7 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(349, 354);
             this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "v1.2 New Features\r\n\r\n-Copy-pasting of cells as well as entire rows is now functio" +
-    "nal\r\n-Various bug fixes to prevent crashes";
+            this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
             // label2
             // 

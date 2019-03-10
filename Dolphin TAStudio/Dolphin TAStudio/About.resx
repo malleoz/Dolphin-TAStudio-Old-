@@ -117,4 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>v1.2 New Features
+
+-Copy-pasting of cells as well as entire rows is now functional
+-Various bug fixes to prevent crashes
+
+v1.3 New Features
+
+-Undo + Redo functions
+-Button presses are now represented with checkbox booleans.</value>
+  </data>
 </root>
