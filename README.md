@@ -10,7 +10,8 @@ Regarding the analog stick horizontal and vertical inputs, a value of 0 represen
 
 Dolphin-TAStudio allows the user to open said input file and display the input data in a neatly formatted table. The user can modify cell values (except frame count directly) and changes will be reflected when the user saves the file. In addition, the user can add new frames of input by typing in any cell in the empty bottommost row. Default values will be set to save a bit of time when adding several frames at a time. Default values are set as follows:
 
-```Horizontal Input: 7 (Neutral)
+```
+Horizontal Input: 7 (Neutral)
 Vertical Input: 7 (Neutral)
 A: 1 (Pressed)
 B: 0 (Not Pressed)
