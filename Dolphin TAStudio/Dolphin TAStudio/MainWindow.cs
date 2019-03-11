@@ -88,8 +88,18 @@ namespace WindowsFormsApp1
                     string[] row = new string[2];
                     bool[] buttons = new bool[7];
 
-                    row[0] = attributes[0].Substring(attributes[0].IndexOf("=") + 2);
-                    row[1] = attributes[1].Substring(attributes[1].IndexOf("=") + 2);
+                    for (int i = 0; i < 2; i++)
+                    {
+                        row[i] = attributes[i].Substring(attributes[i].IndexOf("=") + 2);
+                        if (Int32.Parse(row[i]) > 14)
+                        {
+                            row[i] = "14";
+                        }
+                        else if (Int32.Parse(row[i]) < 0)
+                        {
+                            row[i] = "0";
+                        }
+                    }
 
                     for (int i = 2; i < table.Columns.Count - 1; i++)
                     {
@@ -156,8 +166,26 @@ namespace WindowsFormsApp1
                 for (int row = 0; row < dataGridView1.RowCount - 1; row++)
                 {
                     string lines = "{";
+                    int value;
 
-                    for (int col = 1; col < dataGridView1.ColumnCount; col++)
+                    for (int col = 1; col < 3; col++)
+                    {
+                        if (Int32.Parse(dataGridView1.Rows[row].Cells[col].Value.ToString()) > 14)
+                        {
+                            value = 14;
+                        }
+                        else if (Int32.Parse(dataGridView1.Rows[row].Cells[col].Value.ToString()) < 0)
+                        {
+                            value = 0;
+                        }
+                        else
+                        {
+                            value = Int32.Parse(dataGridView1.Rows[row].Cells[col].Value.ToString());
+                        }
+                        lines += String.Format("{0} = {1}, ", col_dict[col], value);
+                    }
+
+                    for (int col = 3; col < dataGridView1.ColumnCount; col++)
                     {
                         bool pressed = table.Rows[row][col].ToString() == "True";
 
@@ -526,9 +554,6 @@ namespace WindowsFormsApp1
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveCtrlSToolStripMenuItem.Enabled = false;
-            saveAsToolStripMenuItem.Enabled = false;
-
             //Do nothing if there isn't a file open.
             if (fileName == null)
             {
@@ -542,6 +567,7 @@ namespace WindowsFormsApp1
             else  //If the user didn't make changes, close the table.
             {
                 clearDataTable();
+                saveAsToolStripMenuItem.Enabled = false;
             }
         }
 
